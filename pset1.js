@@ -16,7 +16,11 @@
     @example - makeEven('john'); // 'john'
 */
 
+//const makeEven = str => str % 2 === 0  ? true : false ; 
 
+//console.log(makeEven('taq'));  // 'taq#'
+//console.log(makeEven('john')); // 'john'
+ 
 /* 2
     @func getLastChar
     @param {string} str
@@ -24,6 +28,8 @@
     @desc - return the last character in string
     @example - getLastChar('taq'); // 'q'
 */
+const getLastChar = str => str.charAt(str.length-1);
+console.log(getLastChar("taq"));
 
 /* 3
     @func get3rdChar
@@ -33,7 +39,9 @@
     @example - get3rdChar('taq'); // 'q'
     @example - get3rdChar('mo'); // 'not enough characters!'
 */
-
+const get3rdChar = str => str.charAt(2);
+console.log(get3rdChar("Mielyn"));
+console.log(get3rdChar("taq"));
 /* 4
     @func get3rdCharFromEnd
     @param {string} str
@@ -43,7 +51,9 @@
     @example - get3rdCharFromEnd('mo'); // 'not enough characters!'
     @example - get3rdCharFromEnd('taq karim'); // 'r'
 */
-
+const get3rdCharFromEnd = str => str.charAt(str.length-3);
+console.log(get3rdCharFromEnd("Mielyn"));
+console.log(get3rdCharFromEnd("taq"));
 /* 5
     @func startsWithVowel
     @param {string} str
