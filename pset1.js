@@ -16,11 +16,12 @@
     @example - makeEven('john'); // 'john'
 */
 
-//const makeEven = str => str % 2 === 0  ? true : false ; 
+const makeEven = str => str.length % 2 === 0  ? str  : str + "#" ; 
 
-//console.log(makeEven('taq'));  // 'taq#'
-//console.log(makeEven('john')); // 'john'
- 
+console.log(makeEven("taq"));  // 'taq#'
+console.log(makeEven("john")); // 'john'
+console.log(makeEven("miely"))
+console.log("-----------------------------------"); 
 /* 2
     @func getLastChar
     @param {string} str
@@ -30,6 +31,8 @@
 */
 const getLastChar = str => str.charAt(str.length-1);
 console.log(getLastChar("taq"));
+console.log(getLastChar("djsldjsld"));
+console.log("-----------------------------------"); 
 
 /* 3
     @func get3rdChar
@@ -42,6 +45,11 @@ console.log(getLastChar("taq"));
 const get3rdChar = str => str.charAt(2);
 console.log(get3rdChar("Mielyn"));
 console.log(get3rdChar("taq"));
+console.log("-----------------------------------"); 
+// or 
+const get3rdChar1 = str => str.length < 3 ?  "not enough character" : str.charAt(2); 
+console.log(get3rdChar1("taq"));
+console.log(get3rdChar1("mo"));
 /* 4
     @func get3rdCharFromEnd
     @param {string} str
@@ -54,6 +62,7 @@ console.log(get3rdChar("taq"));
 const get3rdCharFromEnd = str => str.charAt(str.length-3);
 console.log(get3rdCharFromEnd("Mielyn"));
 console.log(get3rdCharFromEnd("taq"));
+console.log("-----------------------------------"); 
 /* 5
     @func startsWithVowel
     @param {string} str
