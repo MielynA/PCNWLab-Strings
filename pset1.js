@@ -162,6 +162,19 @@ console.log("--------------end of problem 8---------------------");
     @example - isPalindromic('bats see bees stab'); // false
     @example - hasUpperCase('taq karim'); // false
 */
+/*const isPalindromic = str => {
+     str = str.toLowerCase()
+    if (str === str.reverse()) {
+        return true;
+    }
+        return false; 
+}
+console.log(isPalindromic('racecar'));
+*/ 
+     
+
+
+
 
 /* 10
     @func getInitials
@@ -175,7 +188,17 @@ console.log("--------------end of problem 8---------------------");
     @example - getInitials('John       Smith'); // "js"
     @example - getInitials('sue RonaN'); // "sr"
 */
+/*const getInitials = str => {
+    const names = str.split(); 
+    const initials = names[0].substring(0,1);
 
+    if (names.length > -1 ){
+        initials = names[names.length -1].substring(0,1)
+    }
+        return initials;
+}
+
+console.log(getInitials('taq karim')); */
 /* 11
     @func isPerfectStr
     @param {string} str
@@ -202,3 +225,8 @@ console.log("--------------end of problem 8---------------------");
     @example - capitalLast('hello', 'wrold'); // "helwroldlo"
 */
 
+const strMasher = (str1,str2) => `${str1.substring(0,Math.ceil(str1.length / 2))}${str2}${str1.substring(Math.ceil(str1.length / 2))}`
+
+console.log(strMasher('help', 'me')) // "hemelp"
+console.log(strMasher('hello', 'wrold')) // "helwroldlo"
+console.log("--------------end of problem 12---------------------");
