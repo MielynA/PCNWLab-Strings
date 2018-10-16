@@ -145,7 +145,13 @@ console.log("--------------end of problem 7---------------------");
     @example - hasUpperCase('tag'); // false
     @example - hasUpperCase('taq karim'); // false
 */
+const hasUpperCase = str => str !== str.toLowerCase() ? true : false ; 
 
+console.log(hasUpperCase('tAq'));
+console.log(hasUpperCase('TAQ'));
+console.log(hasUpperCase('tag'));
+console.log(hasUpperCase('taq karim'));
+console.log("--------------end of problem 8---------------------");
 /* 9
     @func isPalindromic
     @param {string} str
