@@ -21,7 +21,7 @@ const makeEven = str => str.length % 2 === 0  ? str  : str + "#" ;
 console.log(makeEven("taq"));  // 'taq#'
 console.log(makeEven("john")); // 'john'
 console.log(makeEven("miely"))
-console.log("-----------------------------------"); 
+console.log("--------------end of problem 1---------------------"); 
 /* 2
     @func getLastChar
     @param {string} str
@@ -32,7 +32,7 @@ console.log("-----------------------------------");
 const getLastChar = str => str.charAt(str.length-1);
 console.log(getLastChar("taq"));
 console.log(getLastChar("djsldjsld"));
-console.log("-----------------------------------"); 
+console.log("--------------end of problem 2---------------------"); 
 
 /* 3
     @func get3rdChar
@@ -45,11 +45,12 @@ console.log("-----------------------------------");
 const get3rdChar = str => str.charAt(2);
 console.log(get3rdChar("Mielyn"));
 console.log(get3rdChar("taq"));
-console.log("-----------------------------------"); 
+
 // or 
 const get3rdChar1 = str => str.length < 3 ?  "not enough character" : str.charAt(2); 
 console.log(get3rdChar1("taq"));
 console.log(get3rdChar1("mo"));
+console.log("--------------end of problem 3---------------------"); 
 /* 4
     @func get3rdCharFromEnd
     @param {string} str
@@ -62,7 +63,7 @@ console.log(get3rdChar1("mo"));
 const get3rdCharFromEnd = str => str.charAt(str.length-3);
 console.log(get3rdCharFromEnd("Mielyn"));
 console.log(get3rdCharFromEnd("taq"));
-console.log("-----------------------------------"); 
+console.log("--------------end of problem 4---------------------"); 
 /* 5
     @func startsWithVowel
     @param {string} str
@@ -73,7 +74,19 @@ console.log("-----------------------------------");
     @example - startsWithVowel('andy'); // true
     @example - startsWithVowel('Andy'); // true
 */
+const startsWithVowel = str => {
+    const vowel = str.charAt(0).toLowerCase()
+    if("aeiou".indexOf(vowel) > -1 ){
+         return true;
 
+    } 
+        return false; 
+}
+console.log(startsWithVowel('taq'));
+console.log(startsWithVowel('Dfghjkl'));
+console.log(startsWithVowel('andy'));
+console.log(startsWithVowel('Andy'));
+console.log("--------------end of problem 5---------------------"); 
 /* 6
     @func endsWithVowel
     @param {string} str
@@ -84,8 +97,19 @@ console.log("-----------------------------------");
     @example - endsWithVowel('andi'); // true
     @example - endsWithVowel('AndI'); // true
 */
+const endsWithVowel = str => {
+    const vowel = str.charAt(0).toLowerCase()
+    if("aeiou".indexOf(vowel) < -1 ){
+         return true;
 
-
+    } 
+        return false; 
+}
+console.log(startsWithVowel('taq'));
+console.log(startsWithVowel('Dfghjkl'));
+console.log(startsWithVowel('andi'));
+console.log(startsWithVowel('AndI'));
+console.log("--------------end of problem 6---------------------"); 
 /* 7
     @func hasVowels
     @param {string} str
@@ -96,8 +120,21 @@ console.log("-----------------------------------");
     @example - hasVowels('dfghjkl'); // false
     @example - hasVowels('taq karim'); // true
 */
+const hasVowels = str => {
+   const loweredVowel = str.toLowerCase();
+   if (loweredVowel.indexOf('a') > -1 ) return true;
+   if (loweredVowel.indexOf('e') > -1 ) return true;
+   if (loweredVowel.indexOf('i') > -1 ) return true;
+   if (loweredVowel.indexOf('o') > -1 ) return true;
+   if (loweredVowel.indexOf('u') > -1 ) return true;
 
-
+return false; 
+}
+console.log(hasVowels('taq'));
+console.log(hasVowels('TAQ'));
+console.log(hasVowels('dfghjkl'));
+console.log(hasVowels('taq karim'));
+console.log("--------------end of problem 7---------------------");
 /* 8
     @func hasUpperCase
     @param {string} str
